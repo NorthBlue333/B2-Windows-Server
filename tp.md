@@ -10,7 +10,7 @@ Il faut tout d'abord attribuer une IP statique pour le serveur (et par la même 
 - Modifier l'IP statique
 
 _Serveur_
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/ipstatic.png)
 
 Pour mettre en place un serveur DNS, il faut suivre les étapes suivantes sur le serveur :
 
@@ -18,7 +18,7 @@ Pour mettre en place un serveur DNS, il faut suivre les étapes suivantes sur le
 - A l'étape `Rôles de serveurs` sélectionner `Serveur DNS` (et par la même occasion `AD DS` pour les prochaines étapes)
 - Installer le tout
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/addroles.png)
 
 ### B. Paramétrage de la zone de recherche directe
 
@@ -49,7 +49,7 @@ Pour cette étape il faut se rendre dans `Gestionnaire de serveur -> DNS -> Clic
 - Ne pas autoriser les mises à jour dynamiques
 - Terminer
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/configuredns.png)
 
 ## II. Mise en place d'Active Directory
 
@@ -59,7 +59,7 @@ L'installer d'AD DS est déjà fait suite à l'étape précédente.
 
 Promouvoir le serveur en contrôleur de domaine :
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/promoteserver.png)
 
 - Ajouter une nouvelle forêt en la nommant (pour moi `ltabbara.local`)
 - Créer une nouveau mot de passe
@@ -145,11 +145,12 @@ foreach ($user in $users)
 }
 ```
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/powershell-1.png)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/powershell-2.png)
 
 Depuis le centre d'administration on peut vérifier :
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/allusers.png)
 
 Il faut maintenant ajouter le PC client au domaine : Depuis le client, faire les étapes suivantes :
 
@@ -159,11 +160,11 @@ Il faut maintenant ajouter le PC client au domaine : Depuis le client, faire les
 - Utilisateur standard
 - Redémarrer maintenant
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/joindomain.png)
 
 ### C. Les types de zones seront changées afin d'obtenir des zones intégrées Active Directory
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/checkdns.png)
 
 ## III. Gestion des comptes
 
@@ -181,16 +182,16 @@ Il faut ajouter une fonctionnalité :
 
 - `Ajouter des rôles et des fonctionnalités > Gestionnaire de ressources du serveur de fichier`
 - Installer le tout
-  ![image](lien)
+  ![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/addrolefiles.png)
 
 On peut ensuite aller dans l'outil correspondant. On crée un modèle de quota :
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/quotas.png)
 
 Puis on crée un quota :
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/quotas-2.png)
 
 On peut enfin ajouter le dossier de base pour l'utilisateur (ici A.BERNARD)
 
-![image](lien)
+![image](https://raw.githubusercontent.com/NorthBlue333/B2-Windows-Server/master/userfiles.png)
